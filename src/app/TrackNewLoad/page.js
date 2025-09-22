@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import io from 'socket.io-client';
 import './TrackNewLoad.css';
 
-const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://load-d7w7.onrender.com';
+const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://backend-23gf.onrender.com';
 const GOOGLE_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyCnMo9hEXw5QQTNAkXCxEan0QUT1oXNL00';
 
 export default function TrackNewLoad() {

@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 
-const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || "https://load-d7w7.onrender.com";
+const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || "https://backend-23gf.onrender.com";
 
 export default function Home() {
   const [loads, setLoads] = useState([]);
