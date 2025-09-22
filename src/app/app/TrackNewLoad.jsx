@@ -230,7 +230,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./TrackNewLoad.css";
 
-const BACKEND = " http://localhost:3000";
+const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3000";
 
 export default function TrackNewLoad() {
   const [geofence, setGeofence] = useState(0.25);
@@ -258,7 +258,7 @@ export default function TrackNewLoad() {
     if (!window.google) {
       const script = document.createElement("script");
       script.src =
-        `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY&libraries=places`;
+        `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyCnMo9hEXw5QQTNAkXCxEan0QUT1oXNL00'}&libraries=places`;
       script.async = true;
       script.onload = initMap;
       document.body.appendChild(script);
