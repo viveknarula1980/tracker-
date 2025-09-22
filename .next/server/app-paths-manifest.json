@@ -1,3 +1,5 @@
 {
-  "/page": "app/page.js"
+  "/track/[id]/page": "app/track/[id]/page.js",
+  "/page": "app/page.js",
+  "/TrackNewLoad/page": "app/TrackNewLoad/page.js"
 }

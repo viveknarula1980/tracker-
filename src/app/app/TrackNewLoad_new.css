@@ -1,0 +1,321 @@
+/* ===== Page Layout ===== */
+.page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 220px;
+  background: #e6f7ff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.users-label {
+  font-weight: bold;
+  color: #444;
+}
+
+.add-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.sidebar-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-item {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list-item.active {
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+/* ===== Main Card ===== */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.create-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ===== Fields ===== */
+.field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fafafa;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  margin-left: 8px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.flag {
+  font-size: 16px;
+}
+
+.hint {
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* ===== Toggle Buttons (Pickup/Drop-off) ===== */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-buttons {
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 25px;
+  padding: 4px;
+  gap: 0;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.toggle-btn.active {
+  background: white;
+  color: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+/* ===== Address Input ===== */
+.address-input-container {
+  position: relative;
+}
+
+.address-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.address-input:focus {
+  outline: none;
+  border-color: #007bff;
+  background: white;
+}
+
+/* ===== Add Stop ===== */
+.add-stop {
+  background: white;
+  border: 1px dashed #007bff;
+  color: #007bff;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== Geofence Slider ===== */
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.geofence-slider {
+  width: 100%;
+  margin: 8px 0;
+  accent-color: #007bff;
+  height: 6px;
+  border-radius: 3px;
+  background: #e0e0e0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.geofence-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.geofence-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Checkbox ===== */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ===== Send Later Button ===== */
+.send-later-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-later-container:hover {
+  background: #f0f0f0;
+  border-color: #007bff;
+}
+
+.send-later-btn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.send-later-btn.active {
+  color: #007bff;
+}
+
+.dropdown-arrow {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ===== Map ===== */
+.map-container {
+  flex: 1.5;
+  height: 100%;
+}
